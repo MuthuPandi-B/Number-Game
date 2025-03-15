@@ -107,8 +107,7 @@ const App = () => {
   // 📌 Save Score to Backend & Fetch Best Score
   const saveScore = async (name, attempts, time, score) => {
     try {
-      await axios.post("https://number-game-n2wf.onrender.com/save-score", {
-      // await axios.post("http://localhost:5000/save-score", {
+      await axios.post("http://localhost:5000/save-score", {
         name,
         attempts,
         time,
