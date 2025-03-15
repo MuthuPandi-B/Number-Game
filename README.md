@@ -1,8 +1,10 @@
 A fun and interactive Guessing Number Game where players try to guess a unique four-digit number based on feedback from the system. Built using React, Node.js, Express.js, MongoDB, and Tailwind CSS.
+
 🛠 Tech Stack
 Frontend: React, Tailwind CSS
 Backend: Node.js, Express.js
 Database: MongoDB
+
 📌 Features
 ✅ Start a new game with a user-entered name
 ✅ Generate a random four-digit number with no duplicate digits
