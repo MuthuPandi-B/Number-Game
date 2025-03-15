@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.neon-text {
+    text-shadow: 0 0 10px #3b82f6, 0 0 20px #3b82f6, 0 0 30px #3b82f6;
+  }
+  
+  .neon-button {
+    box-shadow: 0 0 10px #3b82f6, 0 0 20px #3b82f6;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .neon-button:hover {
+    box-shadow: 0 0 20px #3b82f6, 0 0 30px #3b82f6;
+  }
