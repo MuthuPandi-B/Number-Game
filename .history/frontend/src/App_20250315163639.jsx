@@ -93,12 +93,10 @@ const App = () => {
 
     if (feedbackStr === "++++") {
       const timeTaken = (Date.now() - startTime) / 1000;
-    
       const score = 1000 / timeTaken + 100 / (attempts + 1); // 🏆 Best Score Formula
-    
+      console.log
       setFinalScore(score.toFixed(2));
       saveScore(playerName, attempts + 1, timeTaken, score);
-
       setFeedback(`🎉 You won in ${attempts + 1} attempts!`);
       setGameStarted(false);
       setGameOver(true);
@@ -108,7 +106,6 @@ const App = () => {
   };
 
   // 📌 Save Score to Backend & Fetch Best Score
-
   const saveScore = async (name, attempts, time, score) => {
     try {
       await axios.post("https://number-game-n2wf.onrender.com/save-score", {

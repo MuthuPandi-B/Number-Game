@@ -37,7 +37,7 @@ app.get("/", (req, res) => {
 app.post("/save-score", async (req, res) => {
   try {
     const { name, attempts, time,score} = req.body;
-   
+    console.log(name, attempts, time,score);
 
 
     // Save new score

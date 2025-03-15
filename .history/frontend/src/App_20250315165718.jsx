@@ -27,8 +27,8 @@ const App = () => {
   // 📌 Fetch Best Score
   const fetchBestScore = async () => {
     try {
-      const response = await axios.get("https://number-game-n2wf.onrender.com/best-score");
-      // const response = await axios.get("http://localhost:5000/best-score");
+      // const response = await axios.get("https://number-game-n2wf.onrender.com/best-score");
+      const response = await axios.get("http://localhost:5000/best-score");
       setBestScore(response.data);
     } catch (error) {
       console.error("Error fetching best score", error);
@@ -63,7 +63,7 @@ const App = () => {
     setSecretNumber(newSecretNumber);
     setShowNameInput(false);
     setFeedback("");
-    // console.log(`🔍 Secret Number (Debug): ${newSecretNumber}`);
+    console.log(`🔍 Secret Number (Debug): ${newSecretNumber}`);
   };
 
   // 📌 Check User's Guess
@@ -98,7 +98,7 @@ const App = () => {
     
       setFinalScore(score.toFixed(2));
       saveScore(playerName, attempts + 1, timeTaken, score);
-
+      console.log(playerName, attempts + 1, timeTaken, score);
       setFeedback(`🎉 You won in ${attempts + 1} attempts!`);
       setGameStarted(false);
       setGameOver(true);
@@ -111,8 +111,8 @@ const App = () => {
 
   const saveScore = async (name, attempts, time, score) => {
     try {
-      await axios.post("https://number-game-n2wf.onrender.com/save-score", {
-      // await axios.post("http://localhost:5000/save-score", {
+      // await axios.post("https://number-game-n2wf.onrender.com/save-score", {
+      await axios.post("http://localhost:5000/save-score", {
         name,
         attempts,
         time,

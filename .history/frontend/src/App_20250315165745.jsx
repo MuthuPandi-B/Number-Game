@@ -63,7 +63,7 @@ const App = () => {
     setSecretNumber(newSecretNumber);
     setShowNameInput(false);
     setFeedback("");
-    // console.log(`🔍 Secret Number (Debug): ${newSecretNumber}`);
+    console.log(`🔍 Secret Number (Debug): ${newSecretNumber}`);
   };
 
   // 📌 Check User's Guess

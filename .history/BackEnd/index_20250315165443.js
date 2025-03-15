@@ -37,8 +37,11 @@ app.get("/", (req, res) => {
 app.post("/save-score", async (req, res) => {
   try {
     const { name, attempts, time,score} = req.body;
-   
+    console.log(name, attempts, time,score);
 
+    // 📌 Updated Scoring Formula (Higher is Better)
+    // const finalScore = 10000 / (attempts * 2 + time);
+    // console.log(finalScore);
 
     // Save new score
     const newScore = new Score({ name, attempts, time, finalScore:score });
